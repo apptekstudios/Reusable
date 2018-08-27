@@ -29,6 +29,12 @@
 		A0AD6BA45DAA12BCD17529C7CD7D2220 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD53A29D7CB7D64446A47AC6B25452DC /* UIKit.framework */; };
 		A57C224200A920D07677BB4F6C141B1D /* Pods-ReusableDemo tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ED66A027868D5B876E44283A1D2714D9 /* Pods-ReusableDemo tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACBEBCAB8D8C779BDF2817B5FA498D62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922196E4B9A8DF0BA58D40DC605C2256 /* Foundation.framework */; };
+		B848C9DD21342524009794F6 /* ObjCException.h in Headers */ = {isa = PBXBuildFile; fileRef = B848C9DB21342524009794F6 /* ObjCException.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B848C9DE21342524009794F6 /* ObjCException.h in Headers */ = {isa = PBXBuildFile; fileRef = B848C9DB21342524009794F6 /* ObjCException.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B848C9DF21342524009794F6 /* ObjCException.m in Sources */ = {isa = PBXBuildFile; fileRef = B848C9DC21342524009794F6 /* ObjCException.m */; };
+		B848C9E021342524009794F6 /* ObjCException.m in Sources */ = {isa = PBXBuildFile; fileRef = B848C9DC21342524009794F6 /* ObjCException.m */; };
+		B848C9E8213429B0009794F6 /* ObjCException.swift in Sources */ = {isa = PBXBuildFile; fileRef = B848C9E7213429B0009794F6 /* ObjCException.swift */; };
+		B848C9E9213429B0009794F6 /* ObjCException.swift in Sources */ = {isa = PBXBuildFile; fileRef = B848C9E7213429B0009794F6 /* ObjCException.swift */; };
 		CA19A96D9D3A8D816E1519D7A2DCDB17 /* Reusable-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E51095A3435FC405B95D01CEB2E6761 /* Reusable-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA07527C7BF1D6054521E8D6DE42AC69 /* Pods-ReusableDemo iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 75BE09819782C98834791EFD9D29FF3B /* Pods-ReusableDemo iOS-dummy.m */; };
 		DEBD7C4088BAAE6E26D32CACD10FC0E4 /* Reusable-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE82B8602171E6BABE92B410B71A9845 /* Reusable-tvOS-dummy.m */; };
@@ -94,6 +100,9 @@
 		AE82B8602171E6BABE92B410B71A9845 /* Reusable-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Reusable-tvOS-dummy.m"; path = "../Reusable-tvOS/Reusable-tvOS-dummy.m"; sourceTree = "<group>"; };
 		B1CFDD6662D2C3A0C8A0820E73F83CAE /* Reusable-tvOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Reusable-tvOS.xcconfig"; path = "../Reusable-tvOS/Reusable-tvOS.xcconfig"; sourceTree = "<group>"; };
 		B5BF75A452273EA6A6A89B70A499A650 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B848C9DB21342524009794F6 /* ObjCException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCException.h; sourceTree = "<group>"; };
+		B848C9DC21342524009794F6 /* ObjCException.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjCException.m; sourceTree = "<group>"; };
+		B848C9E7213429B0009794F6 /* ObjCException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjCException.swift; sourceTree = "<group>"; };
 		B8F436E7630A5B236CBEF9145E88B2E2 /* Pods-ReusableDemo iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ReusableDemo iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		C40FFB95E0E48B6B19EF527718C6E15C /* Pods-ReusableDemo iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ReusableDemo iOS.modulemap"; sourceTree = "<group>"; };
 		C9504196865F3C990C48E2735785DAAF /* Pods_ReusableDemo_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReusableDemo_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +178,7 @@
 		0BAC012DB5FFB1737A1296B9984829C5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B848C9DA213424DA009794F6 /* ExceptionHandling */,
 				4DA6C7AF483B806350229F9BB19F721F /* NibLoadable.swift */,
 				2252BDFE7D9DF619FDD525C082B88752 /* NibOwnerLoadable.swift */,
 				62D264D4244F785EB7C4672C8F079E34 /* Reusable.swift */,
@@ -292,6 +302,16 @@
 			path = ../..;
 			sourceTree = "<group>";
 		};
+		B848C9DA213424DA009794F6 /* ExceptionHandling */ = {
+			isa = PBXGroup;
+			children = (
+				B848C9DB21342524009794F6 /* ObjCException.h */,
+				B848C9DC21342524009794F6 /* ObjCException.m */,
+				B848C9E7213429B0009794F6 /* ObjCException.swift */,
+			);
+			path = ExceptionHandling;
+			sourceTree = "<group>";
+		};
 		C0FC1356AD64E534C4D8A9B429E6946A /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,6 +338,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B848C9DE21342524009794F6 /* ObjCException.h in Headers */,
 				0D50F66ABC6518DE36B3196DB0DE9E6A /* Reusable-tvOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,6 +347,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B848C9DD21342524009794F6 /* ObjCException.h in Headers */,
 				CA19A96D9D3A8D816E1519D7A2DCDB17 /* Reusable-iOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,6 +487,8 @@
 				2083A9113A47EE501C13CE19FD0CCA9F /* NibOwnerLoadable.swift in Sources */,
 				666E403055D64E10926F81C4808DD4B5 /* Reusable-iOS-dummy.m in Sources */,
 				826BA9C06F4BEF4545E5CE128F2FDC98 /* Reusable.swift in Sources */,
+				B848C9DF21342524009794F6 /* ObjCException.m in Sources */,
+				B848C9E8213429B0009794F6 /* ObjCException.swift in Sources */,
 				E9F3894123AABC08738901141821D7F8 /* StoryboardBased.swift in Sources */,
 				6C8F26E55BB63D01B89E1BA22E4A78C4 /* StoryboardSceneBased.swift in Sources */,
 				2F9AA043CF861B6748E7C27ABCC92A07 /* UICollectionView+Reusable.swift in Sources */,
@@ -480,6 +504,8 @@
 				3B8C417EAB4A1E2AB8394367DE63AE51 /* NibOwnerLoadable.swift in Sources */,
 				DEBD7C4088BAAE6E26D32CACD10FC0E4 /* Reusable-tvOS-dummy.m in Sources */,
 				1421E6B34CAAA924E4073BF3BDBFB6B1 /* Reusable.swift in Sources */,
+				B848C9E021342524009794F6 /* ObjCException.m in Sources */,
+				B848C9E9213429B0009794F6 /* ObjCException.swift in Sources */,
 				EB976F5E22CEBFCC1E95243AB71AA8B5 /* StoryboardBased.swift in Sources */,
 				4D237CC83DA84668A1CA632B889DE228 /* StoryboardSceneBased.swift in Sources */,
 				3E01A23BC4F57DF65184619B12E6242C /* UICollectionView+Reusable.swift in Sources */,
@@ -577,6 +603,7 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -668,6 +695,7 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -768,6 +796,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -898,6 +927,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/AliSoftware/Reusable.git", :tag => s.version.to_s }
 
   s.subspec 'View' do |ss|
-    ss.source_files  = "Sources/View/*.swift"
+    ss.source_files  = "Sources/View/*.{swift,h,m}"
   end
   s.subspec 'Storyboard' do |ss|
     ss.source_files  = "Sources/Storyboard/*.swift"
